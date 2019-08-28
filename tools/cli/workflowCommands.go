@@ -1406,10 +1406,10 @@ func ResetInBatch(c *cli.Context) {
 			ErrorAndExit("Split failed", fmt.Errorf("line %v has less than 1 cols separated by comma, only %v ", idx, len(cols)))
 		}
 		fmt.Printf("Start processing line %v ...\n", idx)
-		wid := strings.TrimSpace(cols[0])
+		wid := strings.TrimSpace(cols[1])
 		rid := ""
 		if len(cols) > 1 {
-			rid = strings.TrimSpace(cols[1])
+			rid = strings.TrimSpace(cols[2])
 		}
 
 		_, ok := excludes[wid]
