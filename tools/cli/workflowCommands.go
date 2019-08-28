@@ -1344,9 +1344,9 @@ func ResetInBatch(c *cli.Context) {
 		getRequiredOption(c, extraForResetType)
 	}
 
-	if !c.IsSet(FlagSkipCurrent) {
-		ErrorAndExit("need to specify whether skip on current is open", nil)
-	}
+	//if !c.IsSet(FlagSkipCurrent) {
+	//	ErrorAndExit("need to specify whether skip on current is open", nil)
+	//}
 	skipOpen := c.Bool(FlagSkipCurrent)
 
 	parallel := c.Int(FlagParallism)
