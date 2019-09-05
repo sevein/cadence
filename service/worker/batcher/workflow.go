@@ -153,7 +153,7 @@ var (
 		InitialInterval:    10 * time.Second,
 		BackoffCoefficient: 1.7,
 		MaximumInterval:    5 * time.Minute,
-		ExpirationInterval: InfiniteDuration,
+		MaximumAttempts:    1,
 	}
 
 	batchActivityOptions = workflow.ActivityOptions{
